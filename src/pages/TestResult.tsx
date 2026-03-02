@@ -1,5 +1,5 @@
 import { useLocation, useNavigate, Navigate } from 'react-router-dom';
-import { ChevronLeft, RotateCcw, Award, Zap, AlertTriangle, Clock, Hash, MousePointerClick } from 'lucide-react';
+import { ChevronLeft, RotateCcw, Award, Zap, AlertTriangle, Hash, MousePointerClick } from 'lucide-react';
 
 interface TestStats {
    timeElapsed: number; // in seconds

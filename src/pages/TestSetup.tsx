@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { ChevronLeft, Clock, Play, FileText, Settings, Type, Search, Plus } from 'lucide-react';
+import { ChevronLeft, Clock, FileText, Settings, Type, Search, Plus } from 'lucide-react';
 import ParagraphManager from '../components/ParagraphManager';
 import type { Paragraph } from '../components/ParagraphManager';
 

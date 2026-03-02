@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAppStore } from '../store/useAppStore';
-import { LogOut, Play, BookOpen, Clock, Activity, BarChart2, DownloadCloud } from 'lucide-react';
+import { LogOut, Play, BookOpen, Activity, BarChart2, DownloadCloud } from 'lucide-react';
 
 export default function Dashboard() {
   const currentUser = useAppStore(state => state.currentUser);
@@ -13,7 +13,7 @@ export default function Dashboard() {
 
   React.useEffect(() => {
      if (window.electronAPI && window.electronAPI.onUpdaterEvent) {
-        window.electronAPI.onUpdaterEvent((message, data) => {
+        window.electronAPI.onUpdaterEvent((message) => {
            if (message === 'update-downloaded') {
               setUpdateAvailable(true);
            }

@@ -1,4 +1,3 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ChevronLeft, Gamepad2, Car, Bot } from 'lucide-react';
 export default function Games() {

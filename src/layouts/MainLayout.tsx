@@ -1,4 +1,3 @@
-import React from 'react';
 import { Outlet } from 'react-router-dom';
 import TitleBar from '../components/TitleBar';
 export default function MainLayout() {

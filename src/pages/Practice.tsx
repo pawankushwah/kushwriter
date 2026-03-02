@@ -1,9 +1,8 @@
 import { useState, useEffect, useMemo } from 'react';
-import StatsBoard from '../components/StatsBoard';
 import TypingArea from '../components/TypingArea';
 import { useTyping } from '../hooks/useTyping';
 import { Link, useParams } from 'react-router-dom';
-import { ChevronLeft, Layout, Type, AlertTriangle, Star, RefreshCw, Trophy } from 'lucide-react';
+import { ChevronLeft, AlertTriangle, Star, RefreshCw, Trophy } from 'lucide-react';
 import VirtualKeyboard from '../components/VirtualKeyboard';
 
 const sampleTextsEnglish = [
@@ -36,7 +35,7 @@ function getRandomText(pathId?: string) {
 export default function Practice() {
   const { pathId, levelId } = useParams();
   const [currentText, setCurrentText] = useState(getRandomText(pathId));
-  const [viewMode, setViewMode] = useState<'overlay' | 'split'>('overlay');
+  const [viewMode] = useState<'overlay' | 'split'>('overlay');
   const [keyboardWarning, setKeyboardWarning] = useState(false);
   
   const { userInput, isActive, isFinished, stats, reset } = useTyping({

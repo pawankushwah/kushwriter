@@ -71,13 +71,13 @@ export default function Dashboard() {
           </div>
         </div>
         <div className="flex w-full sm:w-auto gap-4 z-10">
-          <button 
+          {/* <button 
              onClick={() => navigate('/progress')}
              className="flex-1 sm:flex-auto px-4 py-2 flex items-center justify-center gap-2 text-white bg-blue-600 hover:bg-blue-500 rounded-xl transition-all shadow-md shadow-blue-500/20"
           >
              <BarChart2 size={18} />
              View Progress
-          </button>
+          </button> */}
           <button 
             onClick={handleLogout}
             className="flex-1 sm:flex-auto px-4 py-2 flex items-center justify-center gap-2 text-slate-400 hover:text-red-400 hover:bg-red-500/10 rounded-xl transition-all"
@@ -90,7 +90,7 @@ export default function Dashboard() {
       {/* Second Row: Continue Learning & Quick Stats */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full">
          {/* Continue Learning right below Profile Card */}
-         <div className="bg-gradient-to-br from-blue-600 to-emerald-600 rounded-3xl p-6 shadow-lg relative overflow-hidden group w-full h-full flex flex-col justify-center">
+         {/* <div className="bg-gradient-to-br from-blue-600 to-emerald-600 rounded-3xl p-6 shadow-lg relative overflow-hidden group w-full h-full flex flex-col justify-center">
             <div className="absolute top-0 right-0 w-48 h-48 bg-white/10 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform duration-700 pointer-events-none z-0" />
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 relative z-10 w-full">
                <div>
@@ -105,10 +105,10 @@ export default function Dashboard() {
                   Play Now
                </Link>
             </div>
-         </div>
+         </div> */}
 
          {/* Quick Stats Card */}
-         <div className="bg-slate-800/60 backdrop-blur-xl border border-slate-700/50 rounded-3xl p-6 flex items-center justify-around shadow-xl relative overflow-hidden h-full">
+         {/* <div className="bg-slate-800/60 backdrop-blur-xl border border-slate-700/50 rounded-3xl p-6 flex items-center justify-around shadow-xl relative overflow-hidden h-full">
             <div className="text-center">
                <div className="text-slate-400 text-sm font-semibold mb-1 uppercase tracking-wider">Avg Speed</div>
                <div className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-400">
@@ -122,7 +122,7 @@ export default function Dashboard() {
                   96<span className="text-lg text-blue-500 font-bold">%</span>
                </div>
             </div>
-         </div>
+         </div> */}
       </div>
 
       {/* Typing Test Section */}
@@ -167,7 +167,7 @@ export default function Dashboard() {
          </div>
       </div>
       {/* Learning Paths */}
-      <div>
+      {/* <div>
          <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
             <BookOpen className="text-blue-400" />
             Learning Paths
@@ -198,7 +198,7 @@ export default function Dashboard() {
                pathId="hindi-remington"
             />
          </div>
-      </div>
+      </div> */}
     </div>
   );
 }

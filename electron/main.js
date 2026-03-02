@@ -10,6 +10,9 @@ autoUpdater.logger = log;
 
 const isDev = process.env.IS_ELECTRON === 'true'; // Set by concurrently script
 
+// Fix lag when opening/closing by disabling aggressive GPU acceleration on some hardware
+app.disableHardwareAcceleration();
+
 let mainWindow = null;
 
 function createWindow() {
@@ -21,6 +24,7 @@ function createWindow() {
     show: false, // Don't show until ready
     frame: false, // Remove default OS title bar
     titleBarStyle: 'hidden', // Optionally keeps some native styling, but hays default
+    backgroundColor: '#0f172a', // Matches React bg-slate-900 to prevent white flash
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       nodeIntegration: false,
@@ -133,7 +137,11 @@ ipcMain.on('window-toggle-maximize', () => {
 });
 
 ipcMain.on('window-close', () => {
-  if (mainWindow) mainWindow.close();
+  if (mainWindow) {
+    // Graceful exit instead of hard crash
+    mainWindow.destroy();
+    app.quit();
+  }
 });
 
 // Auto-Updater API
